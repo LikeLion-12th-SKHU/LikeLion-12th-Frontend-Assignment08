@@ -43,7 +43,7 @@ const NoteList = styled.ul`
 `;
 
 const NoteCard = styled.li`
-  flex: 1 0 calc(10% - 20px); // 플렉스 아이템 너비, 줄바꿈 및 여백 설정
+  width: 200px; // 고정된 너비
   padding: 20px; // 안쪽 여백
   margin: 10px; // 바깥 여백
   font-weight: bold; // 글자 두껍게
