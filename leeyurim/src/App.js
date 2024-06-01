@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MemoList from "./components/MemoList";
-import Creatememo from "./components/Creatememo";
+import CreateMM from "./components/CreateMM";
 import MemoDetail from "./components/MemoDetail";
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<MemoList />} />
-        <Route path="/note/create" element={<Creatememo />} />
+        <Route path="/note/create" element={<CreateMM />} />
         <Route path="/note/:noteid" element={<MemoDetail />} />
       </Routes>
     </Router>

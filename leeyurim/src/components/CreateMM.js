@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const NoteCreate = () => {
+const CreateMM = () => {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
   const [writer, setWriter] = useState("");
@@ -27,13 +27,13 @@ const NoteCreate = () => {
         });
         if (response.status === 200) {
           alert("노트 생성이 완료되었다람쥐!");
-          navigate("/"); // 메모 생성 후 홈으로 이동
+          navigate("http://localhost:3000/");
         } else {
-          alert("메모 생성에 실패했다. 다시 시도하거라.");
+          alert("메모 생성 실패했다람쥐...");
         }
       } catch (error) {
         console.error(error);
-        alert("메모 생성에 실패했다. 다시 시도하거라.");
+        alert("메모 생성 실패했다람쥐...");
       }
     }
   };
@@ -43,7 +43,7 @@ const NoteCreate = () => {
       <h2>메모 생성</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>제목:</label>
+          <label>제목</label>
           <input
             type="text"
             value={name}
@@ -72,4 +72,4 @@ const NoteCreate = () => {
   );
 };
 
-export default NoteCreate;
+export default CreateMM;

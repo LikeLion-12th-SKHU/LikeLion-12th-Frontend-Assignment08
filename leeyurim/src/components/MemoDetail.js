@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "../utils/axiosClient";
 import { useParams } from "react-router-dom";
 
-const NoteDetail = () => {
+const MemoDetail = () => {
   const [memo, setMemo] = useState(null);
   const { noteid } = useParams();
 
@@ -20,7 +20,7 @@ const NoteDetail = () => {
   }, [noteid]);
 
   if (!memo) {
-    return <p>Loading...</p>;
+    return <p>로딩중...</p>;
   }
 
   return (
@@ -34,4 +34,4 @@ const NoteDetail = () => {
   );
 };
 
-export default NoteDetail;
+export default MemoDetail;
