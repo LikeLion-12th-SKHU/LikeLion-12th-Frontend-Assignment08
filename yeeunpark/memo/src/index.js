@@ -1,15 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import LoadingPage from "./components/loadingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import App from "./App";
+// import LoadingPage from "./components/loadingPage";
 import GlobalStyle from "./utils/reset";
+import TodoDetails from "./components/todoDetail";
+import CreateTodo from "./components/createTodo";
+import MainTodo from "./pages/mainTodo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {" "}
-    <App />
-    <GlobalStyle />
-    <LoadingPage />
+    <BrowserRouter>
+      <GlobalStyle />
+      <Routes>
+        <Route
+          path='/'
+          element={<MainTodo />}
+        />{" "}
+        <Route
+          path='/note/create'
+          element={<CreateTodo />}
+        />{" "}
+        <Route
+          path='/note/:id'
+          element={<TodoDetails />}
+        />{" "}
+      </Routes>{" "}
+    </BrowserRouter>{" "}
   </React.StrictMode>
 );
