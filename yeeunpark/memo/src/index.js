@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import App from "./App";
-// import LoadingPage from "./components/loadingPage";
 import GlobalStyle from "./utils/reset";
 import TodoDetails from "./components/todoDetail";
 import CreateTodo from "./components/createTodo";

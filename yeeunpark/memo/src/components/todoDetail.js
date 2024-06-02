@@ -47,11 +47,12 @@ const TodoDetails = () => {
       try {
         setLoading(true);
         const response = await axiosClient.get(`/todos/${id}`);
-        setMemo(response.data);
+        setMemo(response.data); //데이터 저장
       } catch (error) {
         console.log("에러:", error);
+        setLoading(true);
       } finally {
-        setLoading(false);
+        setLoading(false); //로딩 상태 종료
       }
     };
     fetchMemo();
@@ -70,6 +71,7 @@ const TodoDetails = () => {
             <DeTailTxt>
               {" "}
               {new Date(memo.createdTime).toLocaleString()}{" "}
+              {/* 현재 지역에 맞는 문자열로 변환 */}{" "}
             </DeTailTxt>{" "}
             <DeTailTxt> {memo.fields.name} </DeTailTxt>{" "}
             <DeTailTxt> {memo.fields.content} </DeTailTxt>{" "}

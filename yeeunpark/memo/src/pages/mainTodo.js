@@ -61,31 +61,34 @@ const MainTodo = () => {
     setLoading(true);
     try {
       const response = await axiosClient.get("/todos");
-      setTodos(response.data.records);
+      setTodos(response.data.records); //목록 상태 업데이트
       setLoading(false);
     } catch (error) {
       console.error("에러:", error);
-      setLoading(false);
+      setLoading(true);
     }
   };
 
   useEffect(() => {
     fetchTodos();
-  }, []);
+  }, []); //마운트 되었을 때 할 일 목록 출력
+
   const handleDeleteTodo = async (id) => {
     try {
       await axiosClient.delete(`/todos/${id}`);
       alert("삭제가 완료되었습니다!");
       setLoading(true);
-      fetchTodos();
+      fetchTodos(); //목록 재 로드
     } catch (error) {
-      console.error("Error deleting memo:", error);
+      console.error("에러:", error);
+      setLoading(true);
     }
   };
 
   const handleTodoClick = (id) => {
     navigate(`/note/${id}`);
   };
+
   if (loading) {
     return <LoadingPage />;
   }

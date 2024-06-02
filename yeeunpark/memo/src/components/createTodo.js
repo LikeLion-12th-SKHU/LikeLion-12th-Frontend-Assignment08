@@ -88,6 +88,7 @@ const CreateTodo = () => {
     }
   };
 
+  //입력 값이 바뀔 때 호출
   const handleInputChange = (e) => {
     if (errorMessage) {
       setErrorMessage("");
