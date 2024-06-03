@@ -10,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MemoList />} />
         <Route path="/note/create" element={<CreateMM />} />
-        <Route path="/note/:noteid" element={<MemoDetail />} />
+        <Route path="/note/:noteid" element={<MemoDetail />} />{" "}
       </Routes>
     </Router>
   );

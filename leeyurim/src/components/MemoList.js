@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../utils/axiosClient";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -37,7 +37,7 @@ const MemoList = () => {
     };
 
     fetchData();
-  }, []); // 빈 배열을 의존성으로 설정, 컴포넌트가 처음 실행 될 때만 실행
+  }, []); // 빈 배열을 의존성으로 설정, 컴포넌트가 처음 실행될 때만 실행
 
   // 메모를 삭제하는 함수
   const handleDelete = async (id) => {
@@ -65,7 +65,8 @@ const MemoList = () => {
           <MemoItem key={memo.id}>
             {" "}
             {/* 각 메모 아이템을 렌더링 */}
-            {memo.fields.name} {/* 메모의 이름을 표시 */}
+            <Link to={`/note/${memo.id}`}>{memo.fields.name}</Link>{" "}
+            {/* 메모의 이름을 링크로 표시 */}
             <Button onClick={() => handleDelete(memo.id)}>X</Button>{" "}
             {/* 메모 삭제 버튼 */}
           </MemoItem>
