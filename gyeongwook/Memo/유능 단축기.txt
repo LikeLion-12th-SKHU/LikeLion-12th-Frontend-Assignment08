@@ -1,0 +1,20 @@
+유니티
+- ctrl + d : 오브젝트 복사 + 붙혀넣기
+- ctrl + Shift + N : 빈 게임오브젝트 생성
+- ctrl + 6(오브젝트가 클릭되어있는 생태: 애니메이션 창띄우기
+- F :(오브젝트가 클릭되어있는 상태) 선택된 오브젝트로 화면 이동
+- Ctrl + Shift + B : Build Setting 창띄우기
+- Alt + Shift + A : 오브젝트 활성화 / 비활화
+
+VS Visual Studio 2022
+ctrl 9 : 전에 작업하던곳으로 이동
+- ctrl a : 전체선택
+ctrl k f 라인 정리
+ctrl k c 선택 라인 주석(한줄) 처리
+ctrl k u 선택 라인 주석 해제
+/// (함수 또는 클래스) : 전용(함수 또는 클래스) : 전용(함수 또는 클래스) 주석
+F12 해당 함수 또는 클래스 선어부로 이동
+alt + 키보드 Up 또는 Down 해당 라인 코드 이동
+ctrl 키보드 rigth 또는 left 다음 단어로 커서 이동
+ctrl spacebar 코드 자동 완성
+shift f12 선택된 변수 또는 함수또는 클래스사용부분 전부 찾기
