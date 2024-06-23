@@ -8,7 +8,7 @@ const MemoDetails = () => {
 
   // noteId 바뀔 때마다 주소 갱신
   useEffect(() => {
-    fetchMemo();
+    fetchMemo(noteId, setNote);
   }, [noteId]);
 
   if (!note || !note.fields) {
